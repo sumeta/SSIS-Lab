@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="FlatFileToMSSQL"
   DTS:PackageType="5"
-  DTS:VersionBuild="20"
-  DTS:VersionGUID="{67731291-E374-4CB0-90ED-C3FA6476492B}">
+  DTS:VersionBuild="21"
+  DTS:VersionGUID="{458C4059-5E6C-412C-B53A-5ED69E43CBE3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -74,7 +74,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAZkI0uOeSTUKBZDOaeQBtegAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACFbbL7HZeZ7oI3LXYILg4r5zv5w5WnT8foCI2Wy46hpAAAAAAOgAAAAAIAACAAAACTakdiqn81MhzY9CYhgTtO5/XrCJiYnXJ77ElUoJs6HSAAAAB3a2J5bhB9h/lEcTAq6yS0S+HIF4dSZJo9sTz1FAiDVkAAAADB/88TAGuTPnPcfxfCoojKMO1nRUg544bC9+v1aMkWl12BLpX40rS7YGEjU6cGldQGJp72Q+9pGPCGX3JceLu9</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAZkI0uOeSTUKBZDOaeQBtegAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABTtFBcO1p8Y4aJMp+wrhInKNED3DcAvI6K1V2/85MhJQAAAAAOgAAAAAIAACAAAADyMa+0GX1pmKx0eaEwsc7/ECPHpQtFBSf61uZbpot2ZyAAAAA4eYjhKIWp1/yohvAQlDjZGnxQ9xze5ZHlDO0ROGAyBkAAAABqGDWxxbtU5Uh1ApDMZ7ArAxnKMzxgUUxbBbzY1qAmIlSc9IuGCwm33faWEsFhmIJbpjAkunNfk6SiX+Hh+vLD</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -464,13 +464,6 @@
                       cachedName="NtambonId"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[tambonId]"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[NtambonId]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[NzipcodeId]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="NzipcodeId"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[code]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[NzipcodeId]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
