@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="MSSQLToFlatFile"
   DTS:PackageType="5"
-  DTS:VersionBuild="21"
-  DTS:VersionGUID="{C5ADD510-DA6B-486B-B7C1-35AB2FAAFC47}">
+  DTS:VersionBuild="22"
+  DTS:VersionGUID="{432C70A1-D126-4B66-BC53-0C9A52151B33}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -64,7 +64,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAKwYS02UPwUmuovqFLfdgFwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAtAtqm6B/WkywYZ6P+zSkXIYZKFbsohIJuIqkXUkb64wAAAAAOgAAAAAIAACAAAABbFsKxk0NgoMO3I75gNThZ45t00CZ4dfP7wdJhb8I5qCAAAAAI62m0OHUJtRUQBF+M7/bQvUyCmV1DADzzqcHQUp4TP0AAAAAB9CuCBJpG03BNCc6c5/8EDTSFEsu1raMmzjFrYXquKPuGxjumjW0Tkh5seSOAYq1UtuWM1H8oNbB9xDtxkkHN</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAKwYS02UPwUmuovqFLfdgFwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABKAR86mOTsOmSzgzB5HtY84I7gHML+PvE5FJ/3YE53UgAAAAAOgAAAAAIAACAAAACBk1VKs73WH9CCEAhs2cVbF+wpQLBmXv4godR4Pbni+SAAAABAMvjINSmYP+d3lqI1xkwxzhU2e2/vxyMod4+rLFnf7kAAAADGb/9YUMfpcCQ+H4jD5uFYD4zCIKNUV9OmT6kbnns8M32kgX4l3nDD0dMKoxEiTcYKTn7Iui/maQR0hafZr/Mh</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -105,8 +105,7 @@
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[provinceName]"
                       cachedCodepage="874"
-                      cachedDataType="str"
-                      cachedLength="500"
+                      cachedDataType="text"
                       cachedName="provinceName"
                       lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[provinceName]" />
                   </inputColumns>
@@ -142,10 +141,10 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[NprovinceName]"
-                      dataType="wstr"
+                      codePage="874"
+                      dataType="text"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      length="500"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[NprovinceName]"
                       name="NprovinceName"
                       truncationRowDisposition="FailComponent">
@@ -229,13 +228,6 @@
                       cachedName="NprovinceId"
                       externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[provinceId]"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[NprovinceId]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[NprovinceName]"
-                      cachedDataType="wstr"
-                      cachedLength="500"
-                      cachedName="NprovinceName"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[provinceName]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[NprovinceName]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -326,11 +318,10 @@
                     <outputColumn
                       refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[provinceName]"
                       codePage="874"
-                      dataType="str"
+                      dataType="text"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[provinceName]"
-                      length="500"
                       lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[provinceName]"
                       name="provinceName"
                       truncationRowDisposition="FailComponent" />
@@ -344,8 +335,7 @@
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[provinceName]"
                       codePage="874"
-                      dataType="str"
-                      length="500"
+                      dataType="text"
                       name="provinceName" />
                   </externalMetadataColumns>
                 </output>
@@ -362,8 +352,7 @@
                     <outputColumn
                       refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[provinceName]"
                       codePage="874"
-                      dataType="str"
-                      length="500"
+                      dataType="text"
                       lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[provinceName]"
                       name="provinceName" />
                     <outputColumn
@@ -423,7 +412,7 @@
     design-time-name="Package\Data Flow Task">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="156.8,41.6"
           Id="Package\Data Flow Task\OLE DB Source"
@@ -455,9 +444,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="38.10546875,5,36.2890625,9.421875"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -491,9 +478,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-151.24453125,56.2,36.2890625,9.421875"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
