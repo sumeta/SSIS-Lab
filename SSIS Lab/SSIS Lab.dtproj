@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-9HC9SDQ</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAZkI0uOeSTUKBZDOaeQBtegAAAAACAAAAAAAQZgAAAAEAACAAAAAQFhMuZpz9xvTbTtxVt7ghAl4Jdmt4aMfn7/W+AUYGCQAAAAAOgAAAAAIAACAAAABf3g9/7bwrpNG8JUPgNpGdfF63Aj2hjpwSRrpuMQZ0cpAAAABuEqdfTzQ9jdzHw3aCX2iNbpLue3AIk7hbTCxa0U01u57rdAhJ3AzEmc+Kt0cpVkTmOuudJBW3EQFbRUzxRhuYX6MeHPQcVtuSidH7lc9rlQ0unlfCFRI1FBFpHTwP/7WyeHCtWQzkfBCPErjq+j8qkHHutpT9E017Rk0BMBT5P5xUOTsfDQ6UwcnybPnpr0dAAAAAapWMGgdFFh6F37u7aqLHb2rbJObLataP7ZmsQz8jT4U8N6dd3+guJ3tZHl3yu0u6sqg8F/b46IGB+hodT1ZHXA==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAKwYS02UPwUmuovqFLfdgFwAAAAACAAAAAAAQZgAAAAEAACAAAACzfoHnSG81zDi/p5TC6sUxkK7sE9AXhoBgR8enYb0Q5AAAAAAOgAAAAAIAACAAAACTYe1gh6ziZ2PKUsMavQtSStqgLiSgDcPGnudHpeOY15AAAACrXm269bjmHw/NeqIU7Lq1LmK8JuYpBQPyh7GqYK3j0pYow3S3sBcz46kkSX7qxW1mDtH+Adb0CZOTGiJ3dYDzEszoARtldUZzE7xX4A7MgxFioAoG8PbWYopgKxXEmNT/twHNSknT5AkkVQg3KsO+ZsyrVSjOW9DibO7Sx0aSQisv6EKDCo9pGKh9PoATCR1AAAAA76ioBv4m21rwvU9EPwwOdQKZsP7uHh9e7Nx5qtDgUhYrx7D/gF/+0CLrAOR+wkdpsniqDrvuLDVIVhSRFNw/PA==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -233,8 +233,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -395,10 +393,10 @@
                 <SSIS:Property SSIS:Name="Name">MSSQLToFlatFile</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">4</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">21</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{CD8EE373-7C5C-4610-9269-BBE6F06C4810}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{C5ADD510-DA6B-486B-B7C1-35AB2FAAFC47}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -476,7 +474,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">E:\Lab\SSIS Lab\Data\Export\province.csv</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">D:\Lab\SSIS-Lab\Data\Export\province.csv</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -567,6 +565,8 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">
+                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -596,7 +596,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">false</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">true</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -626,7 +626,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">Data Source=localhost;User ID=sa;Initial Catalog=ssis;Provider=SQLNCLI11.1;Auto Translate=False;</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Data Source=localhost;User ID=sa;Initial Catalog=ssis;Provider=MSOLEDBSQL.1;Application Name=SSIS-MSSQLToFlatFile-{514837BB-E499-41C8-AE20-89C8EC5C1525}localhost.ssis.sa;Auto Translate=False;</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>

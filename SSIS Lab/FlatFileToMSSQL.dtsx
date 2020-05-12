@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="FlatFileToMSSQL"
   DTS:PackageType="5"
-  DTS:VersionBuild="21"
-  DTS:VersionGUID="{458C4059-5E6C-412C-B53A-5ED69E43CBE3}">
+  DTS:VersionBuild="22"
+  DTS:VersionGUID="{958E6653-9734-417D-9301-1AA11A6E481C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -74,7 +74,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAZkI0uOeSTUKBZDOaeQBtegAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABTtFBcO1p8Y4aJMp+wrhInKNED3DcAvI6K1V2/85MhJQAAAAAOgAAAAAIAACAAAADyMa+0GX1pmKx0eaEwsc7/ECPHpQtFBSf61uZbpot2ZyAAAAA4eYjhKIWp1/yohvAQlDjZGnxQ9xze5ZHlDO0ROGAyBkAAAABqGDWxxbtU5Uh1ApDMZ7ArAxnKMzxgUUxbBbzY1qAmIlSc9IuGCwm33faWEsFhmIJbpjAkunNfk6SiX+Hh+vLD</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAKwYS02UPwUmuovqFLfdgFwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAA2cU8kLGAC2CATBZLq5X+ngLrgEbxqccAYSYi7ENVjkQAAAAAOgAAAAAIAACAAAACPeM1rYm1d+COus7Z6sQYqnPlwL29mCDuKGVZAhuZSkiAAAACYGjgBovXxwZXnCkESRuI9Dx88bX72MLG7J8eaGFlEYUAAAACwIlQ0zkOmvf0F7aLAslgAPLacU5e1st+LMFaAktnK3g+uFOla3ZIcIaUxlqzLezQDiQ81XVhI4PcI8RSnFvYJ</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -539,7 +539,7 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="155,42"
+          Size="154.666666666667,42"
           Id="Package\Data Flow Task"
           TopLeft="115,45" />
       </GraphLayout>
@@ -555,11 +555,11 @@
           Id="Package\Data Flow Task\Flat File Source"
           TopLeft="111,74" />
         <NodeLayout
-          Size="161,42"
+          Size="161.333333333334,42"
           Id="Package\Data Flow Task\Data Conversion"
           TopLeft="362,78" />
         <NodeLayout
-          Size="177,42"
+          Size="177.333333333334,42"
           Id="Package\Data Flow Task\OLE DB Destination"
           TopLeft="152,226" />
         <EdgeLayout
