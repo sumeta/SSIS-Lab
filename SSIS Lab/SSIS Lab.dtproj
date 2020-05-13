@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-9HC9SDQ</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAKwYS02UPwUmuovqFLfdgFwAAAAACAAAAAAAQZgAAAAEAACAAAAADASUSExpRo+S62N2aoKZ3gDlZ+3zXuTOXsBuBcN6LEAAAAAAOgAAAAAIAACAAAABNUC2Kp1hIB8GyltTV11Yyykka5iyaGYuxe/dzR6BqGJAAAADnHIBl2G16oFhdd8Re0tJVA66HmhOty+IeC2swbNBbR8V8A6ogCIFtoueJIsWhCDYwl5oG0EUTIOV1XWaKgLo6Rs0mOxQhVrBL/p8tcbXj824Z5nXh6YIpNZgyQelC/Y5oTArr7BrfqW41CEjNpfj/PueXVWl9YflGhMO3QN7kZsvl8k/jpFLpTD8+NvlGCX1AAAAAHk3HAoZdj6O1iYtbLgeaOVDuzCEt/3362oUwE7+bMLK7bRMmLZk7aVR1e8N4qdQYpz61vQWbTN6GehWqYHKXiQ==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAKwYS02UPwUmuovqFLfdgFwAAAAACAAAAAAAQZgAAAAEAACAAAAD3FHWEzbwwz27LEqxxoMXbW5CzpBImzyHZpR5tbPFAGwAAAAAOgAAAAAIAACAAAACAWJeks1MS/Nln++7OdUA6GmIiJKN1ZcC1HUn19P10LJAAAAAvliu67Ij+Z63ob0B4H7JSNPABiJZU+J1lqVghj5k54GcA+aAEm7ecRbHs2Xgx1pb1u4KxtorDP3928jObrrTWKH4TrbVnAB2ShOopIuVdajgEhHUszsaPpfDzHzq1KFLfLxv/xT1SmHUQX4i9D4n0KhFEh8xXWrZp3ES/aY8dvcqog/wkABTfbnkJLfJd1spAAAAAd/OBvcrfCxoCQhSOoCDZVuatxYqpwGu0CfDrLK6sh+LUWlmBxBE1VbW/ns9PTCXMkTVQI8ARYak4EtGz7anvIA==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -63,10 +63,10 @@
                 <SSIS:Property SSIS:Name="Name">FlatFileToMSSQL</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">41</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">55</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{A8ADD915-1E26-4007-B322-C08491021889}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{20A5BFF6-FC35-4007-B6C0-6873B46AD2BD}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -99,7 +99,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">1252</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">874</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">9</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -251,7 +251,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">&lt;none&gt;</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">"</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -296,7 +296,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">Data Source=localhost;User ID=sa;Initial Catalog=ssis;Provider=MSOLEDBSQL.1;Auto Translate=False;Application Name=SSIS-FlatFileToMSSQL-{B176708F-737D-479D-8ED5-9F418528E5BA}localhost.ssis.sa;</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Data Source=localhost;User ID=sa;Initial Catalog=ssis;Provider=MSOLEDBSQL.1;Persist Security Info=True;Auto Translate=False;Application Name=SSIS-FlatFileToMSSQL-{B176708F-737D-479D-8ED5-9F418528E5BA}localhost.ssis.sa;</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>

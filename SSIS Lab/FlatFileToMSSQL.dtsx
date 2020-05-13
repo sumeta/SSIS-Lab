@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="FlatFileToMSSQL"
   DTS:PackageType="5"
-  DTS:VersionBuild="41"
-  DTS:VersionGUID="{A8ADD915-1E26-4007-B322-C08491021889}">
+  DTS:VersionBuild="56"
+  DTS:VersionGUID="{04A35533-322F-4685-B7A5-93A21B95D2B1}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -28,8 +28,8 @@
           DTS:HeaderRowDelimiter="_x000D__x000A_"
           DTS:ColumnNamesInFirstDataRow="True"
           DTS:RowDelimiter=""
-          DTS:TextQualifier="_x003C_none_x003E_"
-          DTS:CodePage="1252"
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="874"
           DTS:ConnectionString="D:\Lab\SSIS-Lab\Data\Import\zipcode.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
@@ -39,7 +39,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;id&quot;"
-              DTS:DTSID="{B11CA63F-DE7F-47C5-BCFA-7D24E530DA8B}"
+              DTS:DTSID="{BE9F7C91-2D09-443F-913E-55C5EBFF7B7E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -48,7 +48,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;tambonId&quot;"
-              DTS:DTSID="{7DB5D07E-914E-4D11-9885-07CC9814B4F7}"
+              DTS:DTSID="{0A389203-7A41-423C-9604-E548E70AE4F5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -57,7 +57,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;zipcodeId&quot;"
-              DTS:DTSID="{39D09FA5-A325-48BF-8B4E-C77C1574E688}"
+              DTS:DTSID="{76013555-32C1-4A81-86E6-18582115AD6D}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -70,11 +70,11 @@
       DTS:ObjectName="localhost.ssis.sa">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=localhost;User ID=sa;Initial Catalog=ssis;Provider=MSOLEDBSQL.1;Auto Translate=False;Application Name=SSIS-FlatFileToMSSQL-{B176708F-737D-479D-8ED5-9F418528E5BA}localhost.ssis.sa;">
+          DTS:ConnectionString="Data Source=localhost;User ID=sa;Initial Catalog=ssis;Provider=MSOLEDBSQL.1;Persist Security Info=True;Auto Translate=False;Application Name=SSIS-FlatFileToMSSQL-{B176708F-737D-479D-8ED5-9F418528E5BA}localhost.ssis.sa;">
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAKwYS02UPwUmuovqFLfdgFwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAZzt7cFW5mULuCVtI+CjMHqB5R0RO0eLqgeT/qTQ6BWQAAAAAOgAAAAAIAACAAAAD4sdGDgtXwoafqjqlSHBqyYKVphTtXoc/88/5jYqYqeCAAAAA+6Ooa8plkf9Gj5NvOd4GqwEYWfu0al7vl4S1T83LZRUAAAAAXWi3/r9Dcra7LYtHthve0rA0xuxrMcQSdnFrg9eHyAXLi+qT1+DE52xmel2yNTSjnYuP+eblO/QcNizy9nk+G</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAKwYS02UPwUmuovqFLfdgFwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADa5aVcHfR9GIZFPIFfhKAXzvp224gG8Q5EIZLvJUTw8gAAAAAOgAAAAAIAACAAAADjBHTKRvTR/HfQdFa2qQFcKjcLRx7yv3pI09/RqfChaCAAAADGggmxyHle7rnr72X8ma50AwVihmWPG9YpTUUuURQZA0AAAADys+wQRmWuq9Xm5wRxLC1rkxoBjiLQbLNepDQYnFOs52zNxAuUF5TzM1fsxJD9VmXpInq0ptDDLvJz5thTGOhz</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -82,13 +82,28 @@
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\Data Flow Task"
+      DTS:refId="Package\Import Province"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{2CE31E21-73FB-4FF6-A22F-682288D7FC2B}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Import Province"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Import ZipCode"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
       DTS:DTSID="{E313A734-195A-44F4-8A99-A2A1DA0F3E64}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Data Flow Task"
+      DTS:ObjectName="Import ZipCode"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -96,7 +111,7 @@
           version="1">
           <components>
             <component
-              refId="Package\Data Flow Task\Data Conversion"
+              refId="Package\Import ZipCode\Data Conversion"
               componentClassID="Microsoft.DataConvert"
               contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
               description="Data Conversion"
@@ -104,56 +119,55 @@
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]"
+                  refId="Package\Import ZipCode\Data Conversion.Inputs[Data Conversion Input]"
                   name="Data Conversion Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[&quot;id&quot;]"
-                      cachedCodepage="1252"
+                      refId="Package\Import ZipCode\Data Conversion.Inputs[Data Conversion Input].Columns[&quot;id&quot;]"
+                      cachedCodepage="874"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="&quot;id&quot;"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;id&quot;]" />
+                      lineageId="Package\Import ZipCode\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;id&quot;]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[&quot;tambonId&quot;]"
-                      cachedCodepage="1252"
+                      refId="Package\Import ZipCode\Data Conversion.Inputs[Data Conversion Input].Columns[&quot;tambonId&quot;]"
+                      cachedCodepage="874"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="&quot;tambonId&quot;"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;tambonId&quot;]" />
+                      lineageId="Package\Import ZipCode\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;tambonId&quot;]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[&quot;zipcodeId&quot;]"
-                      cachedCodepage="1252"
+                      refId="Package\Import ZipCode\Data Conversion.Inputs[Data Conversion Input].Columns[&quot;zipcodeId&quot;]"
+                      cachedCodepage="874"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="&quot;zipcodeId&quot;"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;zipcodeId&quot;]" />
+                      lineageId="Package\Import ZipCode\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;zipcodeId&quot;]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output]"
+                  refId="Package\Import ZipCode\Data Conversion.Outputs[Data Conversion Output]"
                   exclusionGroup="1"
                   name="Data Conversion Output"
-                  synchronousInputId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]">
+                  synchronousInputId="Package\Import ZipCode\Data Conversion.Inputs[Data Conversion Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of &quot;id&quot;]"
-                      dataType="wstr"
+                      refId="Package\Import ZipCode\Data Conversion.Outputs[Data Conversion Output].Columns[Nid]"
+                      dataType="i2"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of &quot;id&quot;]"
-                      name="Copy of &quot;id&quot;"
+                      lineageId="Package\Import ZipCode\Data Conversion.Outputs[Data Conversion Output].Columns[Nid]"
+                      name="Nid"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns["id"]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Import ZipCode\Flat File Source.Outputs[Flat File Source Output].Columns["id"]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -161,20 +175,21 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of &quot;tambonId&quot;]"
-                      dataType="wstr"
+                      refId="Package\Import ZipCode\Data Conversion.Outputs[Data Conversion Output].Columns[NtambonId]"
+                      codePage="874"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="50"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of &quot;tambonId&quot;]"
-                      name="Copy of &quot;tambonId&quot;"
+                      lineageId="Package\Import ZipCode\Data Conversion.Outputs[Data Conversion Output].Columns[NtambonId]"
+                      name="NtambonId"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns["tambonId"]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Import ZipCode\Flat File Source.Outputs[Flat File Source Output].Columns["tambonId"]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -182,20 +197,20 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of &quot;zipcodeId&quot;]"
+                      refId="Package\Import ZipCode\Data Conversion.Outputs[Data Conversion Output].Columns[Nzipcode]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="50"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of &quot;zipcodeId&quot;]"
-                      name="Copy of &quot;zipcodeId&quot;"
+                      lineageId="Package\Import ZipCode\Data Conversion.Outputs[Data Conversion Output].Columns[Nzipcode]"
+                      name="Nzipcode"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns["zipcodeId"]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Import ZipCode\Flat File Source.Outputs[Flat File Source Output].Columns["zipcodeId"]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -206,22 +221,22 @@
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output]"
+                  refId="Package\Import ZipCode\Data Conversion.Outputs[Data Conversion Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Data Conversion Error Output"
-                  synchronousInputId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]">
+                  synchronousInputId="Package\Import ZipCode\Data Conversion.Inputs[Data Conversion Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      refId="Package\Import ZipCode\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Import ZipCode\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      refId="Package\Import ZipCode\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Import ZipCode\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -230,7 +245,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\Flat File Source"
+              refId="Package\Import ZipCode\Flat File Source"
               componentClassID="Microsoft.FlatFileSource"
               contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Flat File Source"
@@ -250,25 +265,25 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\Flat File Source.Connections[FlatFileConnection]"
+                  refId="Package\Import ZipCode\Flat File Source.Connections[FlatFileConnection]"
                   connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
                   connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output]"
+                  refId="Package\Import ZipCode\Flat File Source.Outputs[Flat File Source Output]"
                   name="Flat File Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;id&quot;]"
-                      codePage="1252"
+                      refId="Package\Import ZipCode\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;id&quot;]"
+                      codePage="874"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;id&quot;]"
+                      externalMetadataColumnId="Package\Import ZipCode\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;id&quot;]"
                       length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;id&quot;]"
+                      lineageId="Package\Import ZipCode\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;id&quot;]"
                       name="&quot;id&quot;"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -283,14 +298,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;tambonId&quot;]"
-                      codePage="1252"
+                      refId="Package\Import ZipCode\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;tambonId&quot;]"
+                      codePage="874"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;tambonId&quot;]"
+                      externalMetadataColumnId="Package\Import ZipCode\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;tambonId&quot;]"
                       length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;tambonId&quot;]"
+                      lineageId="Package\Import ZipCode\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;tambonId&quot;]"
                       name="&quot;tambonId&quot;"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -305,14 +320,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;zipcodeId&quot;]"
-                      codePage="1252"
+                      refId="Package\Import ZipCode\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;zipcodeId&quot;]"
+                      codePage="874"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;zipcodeId&quot;]"
+                      externalMetadataColumnId="Package\Import ZipCode\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;zipcodeId&quot;]"
                       length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;zipcodeId&quot;]"
+                      lineageId="Package\Import ZipCode\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;zipcodeId&quot;]"
                       name="&quot;zipcodeId&quot;"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -330,47 +345,47 @@
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;id&quot;]"
-                      codePage="1252"
+                      refId="Package\Import ZipCode\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;id&quot;]"
+                      codePage="874"
                       dataType="str"
                       length="50"
                       name="&quot;id&quot;" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;tambonId&quot;]"
-                      codePage="1252"
+                      refId="Package\Import ZipCode\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;tambonId&quot;]"
+                      codePage="874"
                       dataType="str"
                       length="50"
                       name="&quot;tambonId&quot;" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;zipcodeId&quot;]"
-                      codePage="1252"
+                      refId="Package\Import ZipCode\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;zipcodeId&quot;]"
+                      codePage="874"
                       dataType="str"
                       length="50"
                       name="&quot;zipcodeId&quot;" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output]"
+                  refId="Package\Import ZipCode\Flat File Source.Outputs[Flat File Source Error Output]"
                   isErrorOut="true"
                   name="Flat File Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      refId="Package\Import ZipCode\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
                       codePage="1252"
                       dataType="text"
                       description="Flat File Source Error Output Column"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      lineageId="Package\Import ZipCode\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
                       name="Flat File Source Error Output Column" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Import ZipCode\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Import ZipCode\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Import ZipCode\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Import ZipCode\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -379,7 +394,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\OLE DB Destination"
+              refId="Package\Import ZipCode\OLE DB Destination"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
@@ -436,7 +451,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
+                  refId="Package\Import ZipCode\OLE DB Destination.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[localhost.ssis.sa]"
                   connectionManagerRefId="Package.ConnectionManagers[localhost.ssis.sa]"
                   description="The OLE DB runtime connection used to access the database."
@@ -444,34 +459,49 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  refId="Package\Import ZipCode\OLE DB Destination.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of &quot;id&quot;]"
+                      refId="Package\Import ZipCode\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;id&quot;]"
+                      cachedCodepage="874"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;id&quot;"
+                      externalMetadataColumnId="Package\Import ZipCode\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id]"
+                      lineageId="Package\Import ZipCode\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;id&quot;]" />
+                    <inputColumn
+                      refId="Package\Import ZipCode\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Nzipcode]"
                       cachedDataType="wstr"
                       cachedLength="50"
-                      cachedName="Copy of &quot;id&quot;"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of &quot;id&quot;]" />
+                      cachedName="Nzipcode"
+                      externalMetadataColumnId="Package\Import ZipCode\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[code]"
+                      lineageId="Package\Import ZipCode\Data Conversion.Outputs[Data Conversion Output].Columns[Nzipcode]" />
+                    <inputColumn
+                      refId="Package\Import ZipCode\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[NtambonId]"
+                      cachedCodepage="874"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="NtambonId"
+                      externalMetadataColumnId="Package\Import ZipCode\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[tambonId]"
+                      lineageId="Package\Import ZipCode\Data Conversion.Outputs[Data Conversion Output].Columns[NtambonId]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id]"
+                      refId="Package\Import ZipCode\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id]"
                       dataType="i4"
                       name="id" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[tambonId]"
+                      refId="Package\Import ZipCode\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[tambonId]"
                       dataType="i4"
                       name="tambonId" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[code]"
-                      codePage="874"
-                      dataType="str"
+                      refId="Package\Import ZipCode\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[code]"
+                      dataType="wstr"
                       length="50"
                       name="code" />
                   </externalMetadataColumns>
@@ -479,22 +509,22 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Import ZipCode\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\Import ZipCode\OLE DB Destination.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Import ZipCode\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Import ZipCode\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Import ZipCode\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Import ZipCode\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -505,15 +535,15 @@
           </components>
           <paths>
             <path
-              refId="Package\Data Flow Task.Paths[Data Conversion Output]"
-              endId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              refId="Package\Import ZipCode.Paths[Data Conversion Output]"
+              endId="Package\Import ZipCode\OLE DB Destination.Inputs[OLE DB Destination Input]"
               name="Data Conversion Output"
-              startId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output]" />
+              startId="Package\Import ZipCode\Data Conversion.Outputs[Data Conversion Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Flat File Source Output]"
-              endId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]"
+              refId="Package\Import ZipCode.Paths[Flat File Source Output]"
+              endId="Package\Import ZipCode\Data Conversion.Inputs[Data Conversion Input]"
               name="Flat File Source Output"
-              startId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output]" />
+              startId="Package\Import ZipCode\Flat File Source.Outputs[Flat File Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -533,50 +563,58 @@
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
           Size="150.4,41.6"
-          Id="Package\Data Flow Task"
-          TopLeft="115,45" />
+          Id="Package\Import ZipCode"
+          TopLeft="39.0000030199685,33.2133332396613" />
+        <NodeLayout
+          Size="151.2,41.6"
+          Id="Package\Import Province"
+          TopLeft="279.9999888738,42.2933336694506" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\Data Flow Task">
+    design-time-name="Package\Import ZipCode">
     <LayoutInfo>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="151.2,41.6"
-          Id="Package\Data Flow Task\Flat File Source"
+          Id="Package\Import ZipCode\Flat File Source"
           TopLeft="105.999995787939,65.8666671901279" />
         <NodeLayout
           Size="156,41.6"
-          Id="Package\Data Flow Task\Data Conversion"
+          Id="Package\Import ZipCode\Data Conversion"
           TopLeft="391.333317783144,135.893334413317" />
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\Import ZipCode\OLE DB Destination"
+          TopLeft="117.333328670926,214.240001702627" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Flat File Source Output]"
+          Id="Package\Import ZipCode.Paths[Flat File Source Output]"
           TopLeft="181.599995787939,107.466667190128">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="287.733321995206,28.4266672231886"
+              EndConnector="287.733321995205,28.4266672231891"
               Start="0,0"
-              End="287.733321995206,20.9266672231886">
+              End="287.733321995205,20.9266672231891">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,10.2133336115943" />
+                    End="0,10.2133336115945" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,10.2133336115943"
-                    Point2="0,14.2133336115943"
-                    Point3="4,14.2133336115943" />
+                    Point1="0,10.2133336115945"
+                    Point2="0,14.2133336115945"
+                    Point3="4,14.2133336115945" />
                   <mssgle:LineSegment
-                    End="283.733321995206,14.2133336115943" />
+                    End="283.733321995205,14.2133336115945" />
                   <mssgle:CubicBezierSegment
-                    Point1="283.733321995206,14.2133336115943"
-                    Point2="287.733321995206,14.2133336115943"
-                    Point3="287.733321995206,18.2133336115943" />
+                    Point1="283.733321995205,14.2133336115945"
+                    Point2="287.733321995205,14.2133336115945"
+                    Point3="287.733321995205,18.2133336115946" />
                   <mssgle:LineSegment
-                    End="287.733321995206,20.9266672231886" />
+                    End="287.733321995205,20.9266672231891" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -585,36 +623,32 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="171.2,41.6"
-          Id="Package\Data Flow Task\OLE DB Destination"
-          TopLeft="141.999994357427,249.600001983643" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Data Conversion Output]"
+          Id="Package\Import ZipCode.Paths[Data Conversion Output]"
           TopLeft="469.333317783144,177.493334413317">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-241.733323425717,72.1066675703256"
+              EndConnector="-266.399989112218,36.7466672893095"
               Start="0,0"
-              End="-241.733323425717,64.6066675703256">
+              End="-266.399989112218,29.2466672893095">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,32.0533337851628" />
+                    End="0,14.3733336446548" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,32.0533337851628"
-                    Point2="0,36.0533337851628"
-                    Point3="-4,36.0533337851628" />
+                    Point1="0,14.3733336446548"
+                    Point2="0,18.3733336446548"
+                    Point3="-4,18.3733336446548" />
                   <mssgle:LineSegment
-                    End="-237.733323425717,36.0533337851628" />
+                    End="-262.399989112218,18.3733336446548" />
                   <mssgle:CubicBezierSegment
-                    Point1="-237.733323425717,36.0533337851628"
-                    Point2="-241.733323425717,36.0533337851628"
-                    Point3="-241.733323425717,40.0533337851628" />
+                    Point1="-262.399989112218,18.3733336446548"
+                    Point2="-266.399989112218,18.3733336446548"
+                    Point3="-266.399989112218,22.3733336446548" />
                   <mssgle:LineSegment
-                    End="-241.733323425717,64.6066675703256" />
+                    End="-266.399989112218,29.2466672893095" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -627,7 +661,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Destination">
+    design-time-name="Package\Import ZipCode\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
